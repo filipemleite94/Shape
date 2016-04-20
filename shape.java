@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class shape {
+	//propriedades gerais de figuras geométricas, no caso, o nome.
 	String nome;
 	public shape(String nome){
 		this.nome=nome;
@@ -9,7 +10,10 @@ public class shape {
 		return nome;
 	}
 	
+	//função main que vai requisitar as funções da subclasse triângulo
 	public static void main(String[] args) {
+		
+		//interface pra o usuário personalizar o seu triângulo:
 		Scanner entrada= new Scanner(System.in);
 		System.out.println("Digite o nome da figura: ");
 		String c=entrada.nextLine();
@@ -20,7 +24,9 @@ public class shape {
 		l2=entrada.nextDouble();
 		l3=entrada.nextDouble();
 		tri.definir(l1,l2,l3);
-		System.out.println(tri.Calculararea());
+		
+		//retornar a área do triângulo.
+		System.out.println("A area do triangulo "+tri.getname()+" eh "+tri.Calculararea());
 	}
 
 }
